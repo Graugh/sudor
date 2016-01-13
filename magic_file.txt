@@ -1,0 +1,24 @@
+Warunki:
+AWGN - SNR 30dB
+8-PSK with pi/4 phase
+tx and rx raised cosine filters
+fractional channel delay (for i=1:20 -> delay = 1/i)
+
+data -> modulator -> tx filter -> channel delay -> AWGN -> rx filter -> symbol synchro -> demodulator -> recv
+
+Œredni b³¹d: |recv-data|/no_of_samples
+
+Algorytmy (avg err):
+Zero-Crossing = 0.0048
+Gardner = 6.0066e-05 (tylko 0.001201 dla przesuniêcia o 1)
+Early-Late gate = 9.5105e-05 (tylko 0.001902 dla przesuniêcia o 1)
+Mueller-Muller = 0.0284
+
+Pytania:
+ - czy robimy synchronizacje ramkow¹?
+
+Zadania:
+ - dodaæ synchronizacjê freq
+ - sparametryzowaæ skrypt
+ - ³adnie roz³o¿yæ skrypty
+ - doppler jest w helpie do comm.SymbolSynchronizer (mo¿na dodaæ jak starczy czasu)
