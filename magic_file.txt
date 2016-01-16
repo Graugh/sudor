@@ -18,7 +18,7 @@ Pytania:
  - czy robimy synchronizacje ramkow¹?
 
 Zadania:
- - dodaæ synchronizacjê freq
- - sparametryzowaæ skrypt
- - ³adnie roz³o¿yæ skrypty
- - doppler jest w helpie do comm.SymbolSynchronizer (mo¿na dodaæ jak starczy czasu)
+ - dodac synchronizacje freq
+ - sparametryzowac skrypt
+ - ladnie rozlozyc skrypty
+ - doppler jest w helpie do comm.SymbolSynchronizer (mozna dodac jak starczy czasu)
