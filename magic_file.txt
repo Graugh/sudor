@@ -6,7 +6,7 @@ fractional channel delay (for i=1:20 -> delay = 1/i)
 
 data -> modulator -> tx filter -> channel delay -> AWGN -> rx filter -> symbol synchro -> demodulator -> recv
 
-Œredni b³¹d: |recv-data|/no_of_samples
+sredni blad: |recv-data|/no_of_samples
 
 Algorytmy (avg err):
 Zero-Crossing = 0.0048
@@ -15,10 +15,34 @@ Early-Late gate = 9.5105e-05 (tylko 0.001902 dla przesuniêcia o 1)
 Mueller-Muller = 0.0284
 
 Pytania:
- - czy robimy synchronizacje ramkow¹?
+ - czy robimy synchronizacje ramkowa?
 
 Zadania:
  - dodac synchronizacje freq
  - sparametryzowac skrypt
  - ladnie rozlozyc skrypty
  - doppler jest w helpie do comm.SymbolSynchronizer (mozna dodac jak starczy czasu)
+
+
+__________25.01.2016__________
+
+	Jak szybko sie to zbiega:
+		-        Z pilotem i bez
+		-        Szerokosc pasma PLLa
+	
+	Utrudnic warunki:
+		-        Dolozyc dopplera
+		-        Zmniejszyc moc nadajnika
+	 
+	Czy zmiana filtru petli moze cos zmienic?
+	Zmienic dekoder w synchronizacji symboli.
+	Zlozonosc obliczeniowa algorytmów synchr. symboli
+	 
+	Niejednoznacznosc fazy
+	Polykanie cykli
+	(Cycle-sleep problem)
+	 
+	 
+	Na pozniej: USRP + Matlab
+
+
