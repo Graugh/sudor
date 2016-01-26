@@ -28,17 +28,17 @@ __________25.01.2016__________
 
 	Jak szybko sie to zbiega:
 		-        Z pilotem i bez
-		-        Szerokosc pasma PLLa
+		-        Szerokosc pasma PLLa - Witek
 	
 	Utrudnic warunki:
-		-        Dolozyc dopplera
+		-        Dolozyc dopplera - Witek
 		-        Zmniejszyc moc nadajnika
 	 
-	Czy zmiana filtru petli moze cos zmienic?
+	Czy zmiana filtru petli moze cos zmienic?- Witek
 	Zmienic dekoder w synchronizacji symboli.
 	Zlozonosc obliczeniowa algorytmów synchr. symboli
 	 
-	Niejednoznacznosc fazy
+	Niejednoznacznosc fazy - Witek
 	Polykanie cykli
 	(Cycle-sleep problem)
 	 
