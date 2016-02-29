@@ -1,0 +1,18 @@
+Dane:
+Freq offset - 1e4
+Phase offset - 20
+Latency - 1/5
+Symbol synch algorithm - Mueller-Muller
+SNR - 3
+
+BER is average of 1000 runs with 10000 samples data
+
+|   PILOT LENGTH   |   BER    |
++------------------+----------+
+|     100/1000     |  0,0104  |
+|      50/1000     |  0,01131 |
+|      35/1000     |  0,00869 |
+|      25/1000     |  0,00852 |
+|      20/1000     |  0,00876 |
+|      15/1000     |  0,00882 |
+|      10/1000     |  0,00989 |

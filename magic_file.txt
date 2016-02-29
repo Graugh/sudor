@@ -27,12 +27,12 @@ Zadania:
 __________25.01.2016__________
 
 	Jak szybko sie to zbiega:
-		-        Z pilotem i bez
+		-        Z pilotem i bez - DONE
 		-        Szerokosc pasma PLLa - Witek
 	
 	Utrudnic warunki:
 		-        Dolozyc dopplera - Witek
-		-        Zmniejszyc moc nadajnika
+		-        Zmniejszyc moc nadajnika - DONE
 	 
 	Czy zmiana filtru petli moze cos zmienic?- Witek
 	Zmienic dekoder w synchronizacji symboli.
