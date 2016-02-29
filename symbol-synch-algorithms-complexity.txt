@@ -1,0 +1,29 @@
+Zero-Crossing (decision-directed):
+Single sample per symbol, fragile to frequency offsets and carrier recovery errors. Only values of sample used.
+
+Gardner (non-data-aided):
+Two samples per symbol required
+
+Early-Late (non-data-aided):
+Requires three samples per symbol (value of sample read)
+
+Mueller-Muller (decision-directed):
+Offset calculation based on single sample per symbol. Requires knowledge of symbol assigned to previous sumbol (possibility of error propagation)
+
+Ranked by slowest clock required:
+1. Zero-Crossing
+2. Mueller-Muller
+3. Garnder
+4. Early-Late
+
+Most complex (implementation-wise):
+1. Early-Late
+2. Gardner
+3. Mueller-Muller
+4. Zero-Crossing
+
+Possibly error-prone (?)
+1. Mueller-Muller
+2. Zero-Crossing
+3. Early-Late
+4. Gardner
