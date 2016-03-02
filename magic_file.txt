@@ -1,4 +1,4 @@
-Warunki:
+Warunki: 
 AWGN - SNR 30dB
 8-PSK with pi/4 phase
 tx and rx raised cosine filters
@@ -22,6 +22,7 @@ Zadania:
  - sparametryzowac skrypt
  - ladnie rozlozyc skrypty
  - doppler jest w helpie do comm.SymbolSynchronizer (mozna dodac jak starczy czasu)
+
 
 
 __________25.01.2016__________
