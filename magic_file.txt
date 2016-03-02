@@ -45,4 +45,18 @@ __________25.01.2016__________
 	 
 	Na pozniej: USRP + Matlab
 
+__________02.03.2016__________
 
+TODO na spotkanie:
+1. Wnioski dot. BW PLLa - Witold
+2. Wnioski dot. DF PLLa (plusy minusy) - Witold
+3. Wnioski dot. pilota + wykresy - Karol
+4. Wykres BER dla œrednich warunków radiowych - Karol
+5. Odpornoœæ Zero-Crossing na du¿y freq offset - Karol
+6. Wnioski dot. niejednoznacznoœci fazy - Witold
+Jak siê uda:
+ - czy Mueller-Muller mo¿e propagowaæ b³¹d (przyk³ad) - Karol
+ - doppler - Witold
+ - zmieniæ dekoder w synchronizacji symboli - Karol
+Co siê nie uda:
+ - po³ykanie cykli (cycle-sleep problem)

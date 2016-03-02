@@ -18,8 +18,8 @@ Ranked by slowest clock required:
 
 Most complex (implementation-wise):
 1. Early-Late
-2. Gardner
-3. Mueller-Muller
+2. Mueller-Muller
+3. Gardner
 4. Zero-Crossing
 
 Possibly error-prone (?)
