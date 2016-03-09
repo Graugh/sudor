@@ -10,8 +10,8 @@ sredni blad: |recv-data|/no_of_samples
 
 Algorytmy (avg err):
 Zero-Crossing = 0.0048
-Gardner = 6.0066e-05 (tylko 0.001201 dla przesuni�cia o 1)
-Early-Late gate = 9.5105e-05 (tylko 0.001902 dla przesuni�cia o 1)
+Gardner = 6.0066e-05 (tylko 0.001201 dla przesunięcia o 1)
+Early-Late gate = 9.5105e-05 (tylko 0.001902 dla przesunięcia o 1)
 Mueller-Muller = 0.0284
 
 Pytania:
@@ -37,7 +37,7 @@ __________25.01.2016__________
 	 
 	Czy zmiana filtru petli moze cos zmienic?- Witek
 	Zmienic dekoder w synchronizacji symboli.
-	Zlozonosc obliczeniowa algorytm�w synchr. symboli
+	Zlozonosc obliczeniowa algorytmów synchr. symboli
 	 
 	Niejednoznacznosc fazy - Witek
 	Polykanie cykli
@@ -52,12 +52,53 @@ TODO na spotkanie:
 1. Wnioski dot. BW PLLa - Witold
 2. Wnioski dot. DF PLLa (plusy minusy) - Witold
 3. Wnioski dot. pilota + wykresy - Karol
-4. Wykres BER dla �rednich warunk�w radiowych - Karol
-5. Odporno�� Zero-Crossing na du�y freq offset - Karol
-6. Wnioski dot. niejednoznaczno�ci fazy - Witold
-Jak si� uda:
- - czy Mueller-Muller mo�e propagowa� b��d (przyk�ad) - Karol
+4. Wykres BER dla średnich warunków radiowych - Karol
+5. Odporność Zero-Crossing na duży freq offset - Karol
+6. Wnioski dot. niejednoznaczności fazy - Witold
+Jak się uda:
+ - czy Mueller-Muller może propagować błąd (przykład) - Karol
  - doppler - Witold
- - zmieni� dekoder w synchronizacji symboli - Karol
-Co si� nie uda:
- - po�ykanie cykli (cycle-sleep problem)
+ - zmienić dekoder w synchronizacji symboli - Karol
+Co się nie uda:
+ - połykanie cykli (cycle-slip problem)
+
+__________08.03.2016__________
+1. Błąd fazy dla kolejnych próbek - wykres
+2. BER dla czasu ustalonego
+3. Jaki jest ten czas ustalony - zbadać różnicę fazy, kiedy błąd fazy spadnie poniżej określonego progu
+4. Pasmo, a szybkość zbiegania. Zazwyczaj pasmo - od pi/100, do 2pi/100
+5. Niejdenoznaczność fazy
+	- wzór fazowania
+	- kodowanie różnicowe
+	- sprawność szumowa
+6. Połykanie cykli (cycle-slip problem)
+	- wtedy gdy wysoki BER, a diagram konstelacji "ładny"
+ 	- za duże pasmo (?)
+7. BER_AWGN w Matlabie // E-SNR
+	- BERTool
+	- Porównanie teorii z wynikami/wykresami Matlaba
+	- BER ~ (1/SNR)^K, K - zależne od modulacji
+	- SNR w zakresie [-4; 30]dB	} BER
+	- Modulacjia                    }-//-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
