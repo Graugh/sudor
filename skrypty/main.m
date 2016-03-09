@@ -15,7 +15,7 @@ PFO = comm.PhaseFrequencyOffset(...
     'PhaseOffset',20,...
     'SampleRate',1);
 CARRSYNC = comm.CarrierSynchronizer( ...
-    'SamplesPerSymbol', 2, 'Modulation', 'QPSK');
+    'SamplesPerSymbol', 2, 'Modulation', 'QPSK', 'NormalizedLoopBandwidth', 0.01, 'DampingFactor', 0.707);
 SYMSYNC = comm.SymbolSynchronizer('SamplesPerSymbol',2, ....
                                   'TimingErrorDetector', 'Mueller-Muller (decision-directed)');
 %%
@@ -29,14 +29,20 @@ rxSignal = Channel(DELAY, PFO, txSignal, 1/5, 30); %... latency, snr)
                                                                                 SYMSYNC, DEMOD, rxSignal);
 
 %%
-results = ber_counter(data, recivedSignal)
+ber = ber_counter(data, recivedSignal)
 %%
 
 scatterplot(rxSample);
 title('Signal Before Synchronization');
+
 scatterplot(rxCarrierSynchronized);
 title('Signal After Carrier Synchronization');
+
 scatterplot(rxSymbolSynchronized);
 title('Signal After Symbol Synchronization');
 
+colourfulConstellationDiagram(rxCarrierSynchronized, 'Signal After Carrier Synchronization')
+
+
+PhaseError
 
