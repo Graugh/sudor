@@ -1,4 +1,4 @@
-Warunki: 
+Warunki:  
 AWGN - SNR 30dB
 8-PSK with pi/4 phase
 tx and rx raised cosine filters
