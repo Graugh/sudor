@@ -29,7 +29,8 @@ rxSignal = Channel(DELAY, PFO, txSignal, 1/5, 30); %... latency, snr)
                                                                                 SYMSYNC, DEMOD, rxSignal);
 
 %%
-ber = ber_counter(data, recivedSignal)
+firstCorrectSampleOrSymbol = NumberOfSampleWithAcceptableError( rxSymbolSynchronized, 2 )
+ber = ber_counter(data(firstCorrectSampleOrSymbol:length(data)), recivedSignal(firstCorrectSampleOrSymbol:length(recivedSignal)))
 %%
 
 scatterplot(rxSample);
@@ -42,7 +43,8 @@ scatterplot(rxSymbolSynchronized);
 title('Signal After Symbol Synchronization');
 
 colourfulConstellationDiagram(rxCarrierSynchronized, 'Signal After Carrier Synchronization')
+colourfulConstellationDiagram(rxSymbolSynchronized, 'Signal After Symbol Synchronization')
 
 
-PhaseError
+% PhaseError
 

@@ -1,4 +1,7 @@
-samplesPhases = angle(rxCarrierSynchronized);
+acceptableError = 0.2; %[rad]
+
+% samplesPhases = angle(rxCarrierSynchronized);
+samplesPhases = angle(rxSymbolSynchronized);
 
 figure;
 scatter(1:length(samplesPhases),samplesPhases,8, 'filled')
@@ -25,8 +28,30 @@ for i=1:length(samplesPhases)
 end
 
 samplesPhaseError = abs(samplesPhaseError - pi/4); %*180/pi;
+samplesPhaseMeanError = [];
+numberOfSamplesToMeanError = 50;
+for i=1:length(samplesPhases)
+    if i > numberOfSamplesToMeanError
+        samplesPhaseMeanError(i) = mean(samplesPhaseError(i-numberOfSamplesToMeanError:i));
+    else
+        samplesPhaseMeanError(i) = mean(samplesPhaseError(1:i));
+    end                
+end
+
+for i=1:length(samplesPhases)
+    try
+        if CheckIfGivenValuesAreHigherOrEqualThanExpected(samplesPhaseMeanError(i,i+10), acceptableError) == 1
+            numberOfSampleWithacceptableError = i;
+            break
+        end
+    catch
+    end
+end
+            
+
 figure;
-scatter(1:length(samplesPhases), samplesPhaseError, 8, 'filled')
+% scatter(1:length(samplesPhaseMeanError), samplesPhaseMeanError, 8, 'filled')
+plot(1:length(samplesPhaseMeanError), samplesPhaseMeanError);
 xlabel('Samples')
 ylabel('Phase [rad]')
 
