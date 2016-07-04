@@ -63,10 +63,10 @@ Co się nie uda:
  - połykanie cykli (cycle-slip problem)
 
 __________08.03.2016__________
-1. Błąd fazy dla kolejnych próbek - wykres
-2. BER dla czasu ustalonego
-3. Jaki jest ten czas ustalony - zbadać różnicę fazy, kiedy błąd fazy spadnie poniżej określonego progu
-4. Pasmo, a szybkość zbiegania. Zazwyczaj pasmo - od pi/100, do 2pi/100
+1. Błąd fazy dla kolejnych próbek - wykres - Witek (done)
+2. BER dla czasu ustalonego - Witek (done)
+3. Jaki jest ten czas ustalony - zbadać różnicę fazy, kiedy błąd fazy spadnie poniżej określonego progu - Witek (WIP)
+4. Pasmo, a szybkość zbiegania. Zazwyczaj pasmo - od pi/100, do 2pi/100 
 5. Niejdenoznaczność fazy
 	- wzór fazowania
 	- kodowanie różnicowe
