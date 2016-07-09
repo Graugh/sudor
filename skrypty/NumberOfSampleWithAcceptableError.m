@@ -1,5 +1,5 @@
-function [ expectedNumberOfSample ] = NumberOfSampleWithAcceptableError( samples, samplesPerSymbol )
-    acceptableError = 0.2; %[rad]
+function [ expectedNumberOfSample ] = NumberOfSampleWithAcceptableError( samples, samplesPerSymbol, acceptableError)
+%     acceptableError = 0.2; %[rad]
     samplesPhases = angle(samples);
 
 
@@ -36,6 +36,6 @@ function [ expectedNumberOfSample ] = NumberOfSampleWithAcceptableError( samples
         catch
         end
     end
-    expectedNumberOfSample = ceil(expectedNumberOfSample/samplesPerSymbol)
+    expectedNumberOfSample = ceil(expectedNumberOfSample/samplesPerSymbol);
 end
 
