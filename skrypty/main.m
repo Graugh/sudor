@@ -2,7 +2,7 @@ close all;
 clear;
 clc;
 
-% for acceptablePhaseError=0.1:0.1:0.7
+
     results = [];
     for i=1:1
     %%
@@ -20,19 +20,19 @@ clc;
             'SampleRate',1);
         samplesPerSymbol = 2;
         CARRSYNC = comm.CarrierSynchronizer( ...
-            'SamplesPerSymbol', samplesPerSymbol, 'Modulation', 'QPSK', 'NormalizedLoopBandwidth', 0.01, 'DampingFactor', 2);
+            'SamplesPerSymbol', samplesPerSymbol, 'Modulation', 'QPSK', 'NormalizedLoopBandwidth', 0.01, 'DampingFactor', 0.707);
         SYMSYNC = comm.SymbolSynchronizer('SamplesPerSymbol',samplesPerSymbol, ....
                                           'TimingErrorDetector', 'Mueller-Muller (decision-directed)');
 
         %%
         data = randi([0 3],1000,1);
-        txSignal = Transmitter(MOD, TXFILT, data);
+        txSignal = Transmitter(MOD, TXFILT, data, 'qpsk');
 
         rxSignal = Channel(DELAY, PFO, txSignal, 1/5, 30); %... latency, snr)
 
         %% Receiver
         [rxSample, rxCarrierSynchronized, rxSymbolSynchronized, recivedSignal] = Receiver(RXFILT, CARRSYNC, ....
-                                                                                        SYMSYNC, DEMOD, rxSignal);
+                                                                                        SYMSYNC, DEMOD, rxSignal, 'qpsk');
 
         %%
         acceptablePhaseError = 0.2;
@@ -45,7 +45,8 @@ clc;
     end
 %     acceptablePhaseError
     mean(results)
-% end
+    
+
 %%
 
 scatterplot(rxSample);
