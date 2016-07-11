@@ -52,7 +52,7 @@ end
 figure;
 % scatter(1:length(samplesPhaseMeanError), samplesPhaseMeanError, 8, 'filled')
 plot(1:length(samplesPhaseMeanError), samplesPhaseMeanError);
-xlabel('Samples')
+xlabel('Symbols')
 ylabel('Phase [rad]')
 
 

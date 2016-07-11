@@ -1,5 +1,10 @@
-function [rxSample, rxCarrierSynchronized, rxSymbolSynchronized, recivedSignal] = Receiver(RXFILT, CARRSYNC, SYMSYNC, DEMOD, signal, modulation )
+function [rxSample, rxCarrierSynchronized, rxSymbolSynchronized, recivedSignal] = Receiver(RXFILT, CARRSYNC, SYMSYNC, DEMOD, signal, modulation, cycleSlip )
     rxSample = step(RXFILT,signal);
+    if cycleSlip ~= 0
+        a1=rxSample(1:500*cycleSlip-1);
+        a2=rxSample(500*cycleSlip+1:2000);
+        rxSample=vertcat(a1, a2);
+    end
     rxCarrierSynchronized = step(CARRSYNC,rxSample);
     rxSymbolSynchronized = step(SYMSYNC,rxCarrierSynchronized);
     if strcmp(modulation,'qpsk')

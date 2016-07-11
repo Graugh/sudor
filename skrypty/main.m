@@ -32,7 +32,11 @@ clc;
 
         %% Receiver
         [rxSample, rxCarrierSynchronized, rxSymbolSynchronized, recivedSignal] = Receiver(RXFILT, CARRSYNC, ....
-                                                                                        SYMSYNC, DEMOD, rxSignal, 'qpsk');
+                                                                                        SYMSYNC, DEMOD, rxSignal, 'qpsk', 0);  %last is for Cycle Slip
+                                                                                                                               % 0 - no Cycle Slip
+                                                                                                                               % 1 - at the beginnig
+                                                                                                                               % 2 - in the middle
+                                                                                                                               % 3 - at the end
 
         %%
         acceptablePhaseError = 0.2;
