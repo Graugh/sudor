@@ -1,4 +1,4 @@
-Warunki:  
+﻿Warunki:  
 AWGN - SNR 30dB
 8-PSK with pi/4 phase
 tx and rx raised cosine filters
@@ -65,14 +65,14 @@ Co się nie uda:
 __________08.03.2016__________
 1. Błąd fazy dla kolejnych próbek - wykres - Witek (done)
 2. BER dla czasu ustalonego - Witek (done)
-3. Jaki jest ten czas ustalony - zbadać różnicę fazy, kiedy błąd fazy spadnie poniżej określonego progu - Witek (WIP)
+3. Jaki jest ten czas ustalony - zbadać różnicę fazy, kiedy błąd fazy spadnie poniżej określonego progu - Witek (done)
 4. Pasmo, a szybkość zbiegania. Zazwyczaj pasmo - od pi/100, do 2pi/100 
 5. Niejdenoznaczność fazy
 	- wzór fazowania
 	- kodowanie różnicowe
 	- sprawność szumowa
 6. Połykanie cykli (cycle-slip problem)
-	- wtedy gdy wysoki BER, a diagram konstelacji "ładny"
+	- wtedy gdy wysoki BER, a diagram konstelacji "ładny" : Sprawdzić w adnym oknie
  	- za duże pasmo (?)
 7. BER_AWGN w Matlabie // E-SNR
 	- BERTool
@@ -81,6 +81,34 @@ __________08.03.2016__________
 	- SNR w zakresie [-4; 30]dB	} BER
 	- Modulacjia                    }-//-
 
+
+
+__________13.07.2016__________
+w toerii tor synchronizacji
+
+warunki kiedy cs
+jak sie pozbyc
+kiedy wystapi (np. po transmisji)
+
+
+sterownik UHD
+pakiety do matlaba USRP
+
+
+rozne zegary (rozsynchronizowane)
+
+nagrania z USRP
+
+
+SNR 0-20dB
+
+Plan eksperymentow
+Wyniki
+Wnioski
+
+1. eksperyment przez kabel
+
+automatyczna regulacja wzmocnienia: AGC (matlab)
 
 
 
