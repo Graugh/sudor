@@ -106,7 +106,7 @@ Plan eksperymentow
 Wyniki
 Wnioski
 
-1. eksperyment przez kabel
+1. eksperyment przez kabel (zarobione SMA (?), tłumik przynajmniej 30 dB)
 
 automatyczna regulacja wzmocnienia: AGC (matlab)
 
